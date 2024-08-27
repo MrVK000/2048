@@ -1,0 +1,71 @@
+
+.common
+{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  border-radius: 10px;
+  width: 6em;
+  height: 3em;
+}
+
+.outerDiv {
+  display: grid;
+  background-color: rgb(187,173,160);
+  border-radius: 10px;
+}
+
+.cell
+{
+  font-size: 22px;
+  transition-property: color;
+  transition-duration: 4s;
+  transition-delay: 2s;
+  font-family: sans-serif;
+  border-radius: 10px;
+  width: 3em;
+  height: 3em;
+  align-items: center;
+  border: 5px solid rgb(187,173,160);
+}
+
+.scoreDiv
+{
+  // border: 2px solid gray;
+  font-size: 35px;
+  border-radius: 10PX;
+  color: white;
+  background-color: rgb(143,122,102);
+}
+
+.btn
+{
+  width: 8em;
+  color: white;
+  font-size: 20px;
+  background-color: rgb(143,122,102);
+}
+
+.gameOverDiv
+{
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  font-size: 80px;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+}
+
+
+#circle
+
+{
+  margin: 4em;
+  border: 1px solid black;
+  border-radius: 10000000px;
+}
+
+

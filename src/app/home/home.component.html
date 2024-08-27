@@ -1,0 +1,28 @@
+<div *ngIf="isBlocksFull===true || isWin === true" class="gameOverDiv common">
+  <p *ngIf="isBlocksFull===true">GAME OVER</p>
+  <p *ngIf="isWin === true">YOU WIN</p>
+  <button class="btn" (click)="initialFunc()"><strong>NEW GAME</strong></button>
+</div>
+<div class="common pt-5" [ngStyle]="{'opacity':(isBlocksFull===true  || isWin === true)?0.5:1}">
+  <div class="common" style="flex-direction: column;">
+    <div class="common m-2 p-2 scoreDiv">
+      <label><strong>SCORE: {{score}}</strong></label>
+    </div>
+    <div class="common m-2" *ngIf="isBlocksFull!==true && isWin === false">
+      <button class="btn" (click)="initialFunc()"><strong>NEW GAME</strong></button>
+    </div>
+
+    <div style="width: 100%;">
+      <div class="outerDiv p-1 m-3" [style]="gridFunc()">
+        <ng-container *ngFor="let singleArray of data">
+          <div class="common cell" *ngFor="let value of singleArray;let j=index"
+            [ngStyle]="{'background-color':value!==0?boxBackground[value]:'rgb(205,193,180)','color':((value!==2)&&(value!==4))?'white':'rgb(119,110,101)'}">
+            <strong>{{value ? value : ''}}</strong>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+  </div>
+
+</div>
