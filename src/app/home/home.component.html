@@ -3,7 +3,7 @@
   <p *ngIf="isWin === true">YOU WIN</p>
   <button class="btn" (click)="initialFunc()"><strong>NEW GAME</strong></button>
 </div>
-<div class="common pt-5" [ngStyle]="{'opacity':(isBlocksFull===true  || isWin === true)?0.5:1}">
+<div class="gameBoard common" [ngStyle]="{'opacity':(isBlocksFull===true  || isWin === true)?0.5:1}">
   <div class="common" style="flex-direction: column;">
     <div class="common m-2 p-2 scoreDiv">
       <label><strong>SCORE: {{score}}</strong></label>
@@ -20,6 +20,21 @@
             <strong>{{value ? value : ''}}</strong>
           </div>
         </ng-container>
+      </div>
+    </div>
+
+    <div class="navigationButtonsWrapper">
+      <div class="d-flex">
+        <button class="btn" (click)="handleLeft('up')">Up</button>
+      </div>
+
+      <div class="d-flex horizontalButtons">
+        <button class="btn" (click)="handleLeft('left')">Left</button>
+        <button class="btn" (click)="handleRight('right')">Right</button>
+      </div>
+
+      <div class="d-flex">
+        <button class="btn" (click)="handleRight('down')">Down</button>
       </div>
     </div>
 

@@ -1,11 +1,13 @@
-
-.common
-{
+.common {
   display: flex;
   justify-content: center;
 }
 
-button{
+.gameBoard {
+  padding-top: 4em;
+}
+
+button {
   border-radius: 10px;
   width: 6em;
   height: 3em;
@@ -13,12 +15,11 @@ button{
 
 .outerDiv {
   display: grid;
-  background-color: rgb(187,173,160);
+  background-color: rgb(187, 173, 160);
   border-radius: 10px;
 }
 
-.cell
-{
+.cell {
   font-size: 22px;
   transition-property: color;
   transition-duration: 4s;
@@ -28,28 +29,24 @@ button{
   width: 3em;
   height: 3em;
   align-items: center;
-  border: 5px solid rgb(187,173,160);
+  border: 5px solid rgb(187, 173, 160);
 }
 
-.scoreDiv
-{
-  // border: 2px solid gray;
+.scoreDiv {
   font-size: 35px;
   border-radius: 10PX;
   color: white;
-  background-color: rgb(143,122,102);
+  background-color: rgb(143, 122, 102);
 }
 
-.btn
-{
+.btn {
   width: 8em;
   color: white;
   font-size: 20px;
-  background-color: rgb(143,122,102);
+  background-color: rgb(143, 122, 102);
 }
 
-.gameOverDiv
-{
+.gameOverDiv {
   width: 100%;
   height: 100vh;
   align-items: center;
@@ -59,13 +56,42 @@ button{
   z-index: 5;
 }
 
-
-#circle
-
-{
+#circle {
   margin: 4em;
   border: 1px solid black;
   border-radius: 10000000px;
 }
 
+.navigationButtonsWrapper {
+  display: none;
+}
 
+.navigationButtonsWrapper .btn {
+  width: 4em;
+  height: 2em;
+  margin: 2px;
+}
+
+.navigationButtonsWrapper .d-flex {
+  justify-content: center;
+}
+
+.navigationButtonsWrapper .horizontalButtons {
+  justify-content: space-around;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .navigationButtonsWrapper {
+    display: block;
+  }
+
+  .gameOverDiv {
+    font-size: 40px;
+  }
+
+  .gameBoard {
+    padding-top: 0
+  }
+}
